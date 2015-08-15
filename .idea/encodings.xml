@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="windows-1251">
+    <file url="file://$PROJECT_DIR$/src/com/vadimserov/parse/Aggregator.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/vadimserov/parse/Controller.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/vadimserov/parse/model/HHStrategy.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/vadimserov/parse/model/Model.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/vadimserov/parse/model/Provider.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/vadimserov/parse/model/RabotaKharkovStrategy.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/vadimserov/parse/view/HtmlView.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
