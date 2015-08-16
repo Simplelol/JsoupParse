@@ -22,9 +22,10 @@ public class HtmlView implements View {
     /**Path to the html file with parsing results
     * Путь к html странице с результатом парсинга*/
     private final String filePath = "./src/" + this.getClass().getPackage().getName().replace('.', '/') + "/result.html";
+   // private final String filePath = "result.html";
     public void openFile()  {
         try {
-            File queryResult = new File(filePath.replace("./", ""));
+            File queryResult = new File(filePath, "UTF-8");
             Desktop.getDesktop().browse(queryResult.toURI());
         }catch (IOException e){
             e.printStackTrace();
@@ -58,6 +59,8 @@ public class HtmlView implements View {
         String fileContent = null;
         try {
             Document doc = getDocument();
+
+
             Element templateElement = doc.select(".template").first();
             Element patternElement = templateElement.clone();
             patternElement.removeAttr("style");
@@ -108,6 +111,8 @@ public class HtmlView implements View {
      * @throws IOException if file does not exists
      */
     protected Document getDocument() throws IOException {
+ /*       File f = new File("result.html");
+        f.createNewFile();*/
         return Jsoup.parse(new File(filePath), "UTF-8");
     }
 }

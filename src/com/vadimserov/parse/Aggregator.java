@@ -4,7 +4,9 @@ package com.vadimserov.parse;
 import com.vadimserov.parse.model.*;
 import com.vadimserov.parse.view.HtmlView;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.Locale;
 
 /**
  * Program used to find job vacancies on sites.
@@ -15,6 +17,7 @@ import java.io.IOException;
  */
 public class Aggregator {
     public static void main(String[] args) throws IOException {
+        
 /**
  Creating Html view of parse results
  Создаем html представление результата парсинга страницы
@@ -35,6 +38,7 @@ public class Aggregator {
 
         Model model = new Model(view, HHstrategy, RUAStrategy);
 
+
         /**
          * Setting controller for model
          * Устанавливаем контроллер для данной модели
@@ -52,7 +56,7 @@ public class Aggregator {
         System.out.println("Wait a little, gathering info . . .");
         view.userSearchQueryInput("Java");
             System.out.println("Here is results: " +
-                    "\\src\\com\\vadimserov\\parse\\view\\result.html");
+                    "result.html");
             view.openFile();
         }
     }

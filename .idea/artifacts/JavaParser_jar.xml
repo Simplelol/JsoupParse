@@ -1,9 +1,10 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="JavaParser:jar">
+  <artifact type="jar" build-on-make="true" name="JavaParser:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/JavaParser_jar</output-path>
     <root id="archive" name="JavaParser.jar">
       <element id="module-output" name="JavaParser" />
       <element id="extracted-dir" path="$PROJECT_DIR$/jsouplib/jsoup-1.8.2.jar" path-in-jar="/" />
+      <element id="library" level="project" name="jsoup-1.8.2-sources" />
     </root>
   </artifact>
 </component>
