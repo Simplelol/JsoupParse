@@ -4,9 +4,7 @@ package com.vadimserov.parse;
 import com.vadimserov.parse.model.*;
 import com.vadimserov.parse.view.HtmlView;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.Locale;
 
 /**
  * Program used to find job vacancies on sites.
@@ -17,7 +15,7 @@ import java.util.Locale;
  */
 public class Aggregator {
     public static void main(String[] args) throws IOException {
-        
+
 /**
  Creating Html view of parse results
  Создаем html представление результата парсинга страницы

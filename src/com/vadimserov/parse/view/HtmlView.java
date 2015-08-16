@@ -19,13 +19,22 @@ import java.util.List;
  */
 public class HtmlView implements View {
     private Controller controller;
-    /**Path to the html file with parsing results
-    * Путь к html странице с результатом парсинга*/
-    private final String filePath = "./src/" + this.getClass().getPackage().getName().replace('.', '/') + "/result.html";
-   // private final String filePath = "result.html";
+    /**Path to the html file with parsing results.
+     * Use this path if you run project from .jar file
+     * Путь к html странице с результатом парсинга
+     * Используйте этот путь если вы запускаете программу через .jar файл.
+     * */
+    private final String filePath = "result.html";
+
+    /**
+     * Use this path if you run project from IDE
+     * Испольуйте этот путь если запускаете проект с вашей среды разработки.
+     */
+    //private final String filePath = "./src/" + this.getClass().getPackage().getName().replace('.', '/') + "/result.html";
+
     public void openFile()  {
         try {
-            File queryResult = new File(filePath, "UTF-8");
+            File queryResult = new File(filePath.replace("./", ""));
             Desktop.getDesktop().browse(queryResult.toURI());
         }catch (IOException e){
             e.printStackTrace();
@@ -96,9 +105,12 @@ public class HtmlView implements View {
      */
     private void updateFile(String fileContent) {
         try {
-            BufferedWriter fWriter = new BufferedWriter(new FileWriter(filePath));
-            fWriter.write(fileContent);
-            fWriter.close();
+            RandomAccessFile raf = new RandomAccessFile(filePath, "rw");
+            raf.writeUTF(fileContent);
+            raf.close();
+//            BufferedWriter fWriter = new BufferedWriter(new FileWriter(new FileOutputStream(filePath)));
+//            fWriter.write(fileContent);
+//            fWriter.close();
         }
         catch (IOException e) {
             e.printStackTrace();

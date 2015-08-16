@@ -30,6 +30,7 @@ public class HHStrategy implements Strategy{
             try
             {
                 Document document = getDocument(searchString, page);
+                document.charset().encode("UTF-8");
                 Elements elements = document.getElementsByAttributeValue("data-qa", "vacancy-serp__vacancy");
 
                 if(elements.size() == 0)
