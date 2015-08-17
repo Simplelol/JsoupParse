@@ -11,7 +11,9 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 import java.awt.*;
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
+import java.io.RandomAccessFile;
 import java.util.List;
 
 /** Creating html page with all vacancies on it
@@ -24,13 +26,13 @@ public class HtmlView implements View {
      * Путь к html странице с результатом парсинга
      * Используйте этот путь если вы запускаете программу через .jar файл.
      * */
-    private final String filePath = "result.html";
+    //private final String filePath = "result.html";
 
     /**
      * Use this path if you run project from IDE
      * Испольуйте этот путь если запускаете проект с вашей среды разработки.
      */
-    //private final String filePath = "./src/" + this.getClass().getPackage().getName().replace('.', '/') + "/result.html";
+    private final String filePath = "./src/" + this.getClass().getPackage().getName().replace('.', '/') + "/result.html";
 
     public void openFile()  {
         try {
