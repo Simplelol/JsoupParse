@@ -6,16 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11c62ceb-8a26-4882-aebf-45a165c97451" name="Default" comment="prog work">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaParser/com/vadimserov/parse/view/HtmlView.class" afterPath="$PROJECT_DIR$/out/production/JavaParser/com/vadimserov/parse/view/HtmlView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaParser_jar/JavaParser.jar" afterPath="$PROJECT_DIR$/out/artifacts/JavaParser_jar/JavaParser.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaParser/com/company/Main$1.class" afterPath="$PROJECT_DIR$/out/production/JavaParser/com/company/Main$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaParser/com/company/Main.class" afterPath="$PROJECT_DIR$/out/production/JavaParser/com/company/Main.class" />
+    <list default="true" id="11c62ceb-8a26-4882-aebf-45a165c97451" name="Default" comment="finish">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/vadimserov/parse/view/HtmlView.java" afterPath="$PROJECT_DIR$/src/com/vadimserov/parse/view/HtmlView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaParser/com/vadimserov/parse/view/result.html" afterPath="$PROJECT_DIR$/out/production/JavaParser/com/vadimserov/parse/view/result.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/vadimserov/parse/view/backup.html" afterPath="$PROJECT_DIR$/src/com/vadimserov/parse/view/backup.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/vadimserov/parse/view/result.html" afterPath="$PROJECT_DIR$/src/com/vadimserov/parse/view/result.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaParser/com/vadimserov/parse/view/test.html" afterPath="$PROJECT_DIR$/out/production/JavaParser/com/vadimserov/parse/view/test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/vadimserov/parse/view/test.html" afterPath="$PROJECT_DIR$/src/com/vadimserov/parse/view/test.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JavaParser.iws" />
@@ -43,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/vadimserov/parse/Aggregator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+              <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,13 +61,13 @@
       <file leaf-file-name="HtmlView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/vadimserov/parse/view/HtmlView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4087838">
-              <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.3716216">
+              <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
               <folding>
-                <element signature="e#1579#1580#0" expanded="true" />
-                <element signature="e#1639#1640#0" expanded="true" />
-                <element signature="e#1699#1700#0" expanded="true" />
-                <element signature="e#1751#1752#0" expanded="true" />
+                <element signature="e#1750#1751#0" expanded="true" />
+                <element signature="e#1810#1811#0" expanded="true" />
+                <element signature="e#1870#1871#0" expanded="true" />
+                <element signature="e#1922#1923#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,30 +76,12 @@
       <file leaf-file-name="result.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/vadimserov/parse/view/result.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.0344827">
-              <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="backup.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/vadimserov/parse/view/backup.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.35484">
-              <caret line="30" column="7" selection-start-line="8" selection-start-column="0" selection-end-line="30" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/vadimserov/parse/view/test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-396.0">
-              <caret line="558" column="7" selection-start-line="558" selection-start-column="7" selection-end-line="558" selection-end-column="7" />
+            <state vertical-scroll-proportion="-12.774194">
+              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
               <folding>
-                <element signature="n#style#0;n#tr#90;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#44;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1440069056126" expanded="true" signature="11652:11987" placeholder="..." />
+                <marker date="1440069056126" expanded="true" signature="11652:11998" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -153,7 +129,6 @@
         <option value="$PROJECT_DIR$/src/com/vadimserov/Main.java" />
         <option value="$PROJECT_DIR$/src/com/vadimserov/parse/view/khrabota.html" />
         <option value="$PROJECT_DIR$/src/com/vadimserov/parse/view/Element.html" />
-        <option value="$PROJECT_DIR$/src/com/vadimserov/parse/view/backup.html" />
         <option value="$PROJECT_DIR$/src/com/vadimserov/parse/vo/Vacancy.java" />
         <option value="$PROJECT_DIR$/src/com/vadimserov/parse/Controller.java" />
         <option value="$PROJECT_DIR$/src/com/vadimserov/parse/view/View.java" />
@@ -176,6 +151,7 @@
         <option value="$PROJECT_DIR$/src/com/vadimserov/parse/view/test.html" />
         <option value="$PROJECT_DIR$/out/production/JavaParser/com/vadimserov/parse/view/result.html" />
         <option value="$PROJECT_DIR$/src/com/vadimserov/parse/view/result.html" />
+        <option value="$PROJECT_DIR$/src/com/vadimserov/parse/view/backup.html" />
         <option value="$PROJECT_DIR$/src/com/vadimserov/parse/view/HtmlView.java" />
       </list>
     </option>
@@ -433,10 +409,6 @@
               <option name="myItemId" value="JavaParser" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -563,24 +535,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaParser" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaParser" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="artifacts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -968,7 +922,7 @@
       <workItem from="1439715473587" duration="3686000" />
       <workItem from="1439719849789" duration="10238000" />
       <workItem from="1439803025455" duration="476000" />
-      <workItem from="1440063505837" duration="2803000" />
+      <workItem from="1440063505837" duration="4449000" />
     </task>
     <task id="LOCAL-00001" summary="javaParser created&#10;">
       <created>1439637154165</created>
@@ -982,11 +936,17 @@
       <option name="project" value="LOCAL" />
       <updated>1439803194009</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="query improvement, no more uslesss vacancies">
+      <created>1440066344433</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1440066344433</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36610000" />
+    <option name="totallyTimeSpent" value="38256000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1032,7 +992,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="javaParser created&#10;" />
     <MESSAGE value="prog work" />
-    <option name="LAST_COMMIT_MESSAGE" value="prog work" />
+    <MESSAGE value="query improvement, no more uslesss vacancies" />
+    <option name="LAST_COMMIT_MESSAGE" value="query improvement, no more uslesss vacancies" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1058,10 +1019,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1579#1580#0" expanded="true" />
-            <element signature="e#1639#1640#0" expanded="true" />
-            <element signature="e#1699#1700#0" expanded="true" />
-            <element signature="e#1751#1752#0" expanded="true" />
+            <element signature="e#1750#1751#0" expanded="true" />
+            <element signature="e#1810#1811#0" expanded="true" />
+            <element signature="e#1870#1871#0" expanded="true" />
+            <element signature="e#1922#1923#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1126,10 +1087,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
           <folding>
-            <element signature="e#1579#1580#0" expanded="true" />
-            <element signature="e#1639#1640#0" expanded="true" />
-            <element signature="e#1699#1700#0" expanded="true" />
-            <element signature="e#1751#1752#0" expanded="true" />
+            <element signature="e#1750#1751#0" expanded="true" />
+            <element signature="e#1810#1811#0" expanded="true" />
+            <element signature="e#1870#1871#0" expanded="true" />
+            <element signature="e#1922#1923#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1221,13 +1182,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/JavaParser/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1356,14 +1310,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/JavaParser/com/vadimserov/parse/view/backup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5161295">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/out/production/JavaParser/com/vadimserov/parse/view/HtmlView.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1371,14 +1317,6 @@
           <folding>
             <element signature="e#0#3177#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/JavaParser/com/vadimserov/parse/view/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-371.1613">
-          <caret line="523" column="7" selection-start-line="523" selection-start-column="7" selection-end-line="523" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1402,29 +1340,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/JavaParser/com/vadimserov/parse/view/result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3071553">
-          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/jsouplib/jsoup-1.8.2-sources.jar!/org/jsoup/nodes/Element.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33278146">
           <caret line="1158" column="0" selection-start-line="1158" selection-start-column="0" selection-end-line="1158" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vadimserov/parse/Aggregator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1439,31 +1359,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/vadimserov/parse/view/result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.774194">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#tr#44;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1440069056126" expanded="true" signature="11652:11987" placeholder="..." />
+            <marker date="1440069056126" expanded="true" signature="11652:11998" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/vadimserov/parse/view/backup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.35484">
-          <caret line="30" column="7" selection-start-line="8" selection-start-column="0" selection-end-line="30" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vadimserov/parse/view/result.html">
+    <entry file="file://$PROJECT_DIR$/src/com/vadimserov/parse/Aggregator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.0344827">
-          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/vadimserov/parse/view/HtmlView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4087838">
-          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.3716216">
+          <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
           <folding>
-            <element signature="e#1579#1580#0" expanded="true" />
-            <element signature="e#1639#1640#0" expanded="true" />
-            <element signature="e#1699#1700#0" expanded="true" />
-            <element signature="e#1751#1752#0" expanded="true" />
+            <element signature="e#1750#1751#0" expanded="true" />
+            <element signature="e#1810#1811#0" expanded="true" />
+            <element signature="e#1870#1871#0" expanded="true" />
+            <element signature="e#1922#1923#0" expanded="true" />
           </folding>
         </state>
       </provider>

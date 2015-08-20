@@ -27,13 +27,15 @@ public class HtmlView implements View {
      * Путь к html странице с результатом парсинга
      * Используйте этот путь если вы запускаете программу через .jar файл.
      * */
-    //private final String filePath = "result.html";
+/*    private final String filePath = "result.html";
+    private final String backup = "backup.html";*/
 
     /**
      * Use this path if you run project from IDE
      * Испольуйте этот путь если запускаете проект с вашей среды разработки.
      */
     private final String filePath = "./src/" + this.getClass().getPackage().getName().replace('.', '/') + "/result.html";
+    private final String backup = "./src/" + this.getClass().getPackage().getName().replace('.', '/') + "/backup.html";
 
     public void openFile()  {
         try {
@@ -129,6 +131,6 @@ public class HtmlView implements View {
     protected Document getDocument() throws IOException {
  /*       File f = new File("result.html");
         f.createNewFile();*/
-        return Jsoup.parse(new File(filePath), "UTF-8");
+        return Jsoup.parse(new File(backup), "UTF-8");
     }
 }
