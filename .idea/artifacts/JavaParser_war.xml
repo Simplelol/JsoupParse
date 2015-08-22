@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="JavaParser:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="JavaParser-0.1.war">
+      <element id="artifact" artifact-name="JavaParser:war exploded" />
+    </root>
+  </artifact>
+</component>
