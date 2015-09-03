@@ -11,9 +11,10 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 import java.awt.*;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.io.RandomAccessFile;
 import java.util.List;
 
 /** Creating html page with all vacancies on it
@@ -83,7 +84,7 @@ public class HtmlView implements View {
 
 
             for (Vacancy vacancy : vacancies) {
-                if (!vacancy.getTitle().contains("Java")) continue;
+                //if (!vacancy.getTitle().contains("Java")) continue;
                 Element newVacancyElement = patternElement.clone();
                 newVacancyElement.getElementsByClass("city").first().text(vacancy.getCity());
                 newVacancyElement.getElementsByClass("companyName").first().text(vacancy.getCompanyName());
@@ -110,12 +111,12 @@ public class HtmlView implements View {
      */
     private void updateFile(String fileContent) {
         try {
-            RandomAccessFile raf = new RandomAccessFile(filePath, "rw");
+            /* RandomAccessFile raf = new RandomAccessFile(filePath, "rw");
             raf.writeUTF(fileContent);
-            raf.close();
-/*            BufferedWriter fWriter = new BufferedWriter(new FileWriter(filePath));
+            raf.close(); */
+            BufferedWriter fWriter = new BufferedWriter(new FileWriter(filePath));
             fWriter.write(fileContent);
-            fWriter.close();*/
+            fWriter.close();
         }
         catch (IOException e) {
             e.printStackTrace();
