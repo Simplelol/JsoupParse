@@ -1,6 +1,6 @@
 # JsoupParse
-Gather info about Java vacancies in Kharkiv. Deletes usless vacancies (without "Java" in Title).
-Собирает информацию о вакансиях по запросу Java в Харькове. Удаляет бесполезные вакансии (без "Java" в названии).
+Gather info about Java vacancies in Kharkiv. 
+Собирает информацию о вакансиях по запросу Java в Харькове.
 
 
 USED:
