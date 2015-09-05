@@ -6,6 +6,7 @@ package com.vadimserov.parse.view;
 
 import com.vadimserov.parse.Controller;
 import com.vadimserov.parse.vo.Vacancy;
+import org.apache.log4j.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -28,12 +29,13 @@ public class HtmlView implements View {
      * Используйте этот путь если вы запускаете программу через .jar файл.
      * */
 /*    private final String filePath = "result.html";
-    private final String backup = "backup.html";*/
+      private final String backup = "backup.html";*/
 
     /**
      * Use this path if you run project from IDE
      * Испольуйте этот путь если запускаете проект с вашей среды разработки.
      */
+    private final static Logger logger = Logger.getLogger(HtmlView.class);
     private final String filePath = "./src/main/java/" + this.getClass().getPackage().getName().replace('.', '/') + "/result.html";
     private final String backup = "./src/main/java/" + this.getClass().getPackage().getName().replace('.', '/') + "/backup.html";
 
@@ -41,8 +43,10 @@ public class HtmlView implements View {
         try {
             File queryResult = new File(filePath.replace("./", ""));
             Desktop.getDesktop().browse(queryResult.toURI());
+            logger.info("Program success! Result opened in browser.");
         }catch (IOException e){
-            e.printStackTrace();
+            logger.fatal("Can't open vacanices file to show in browser.", e);
+            System.exit(-1);
         }
     }
 
@@ -74,17 +78,13 @@ public class HtmlView implements View {
         try {
             Document doc = getDocument();
 
-
             Element templateElement = doc.select(".template").first();
             Element patternElement = templateElement.clone();
             patternElement.removeAttr("style");
             patternElement.removeClass("template");
             doc.select("tr[class=vacancy]").remove();
 
-
-
             for (Vacancy vacancy : vacancies) {
-                //if (!vacancy.getTitle().contains("Java")) continue;
                 Element newVacancyElement = patternElement.clone();
                 newVacancyElement.getElementsByClass("city").first().text(vacancy.getCity());
                 newVacancyElement.getElementsByClass("companyName").first().text(vacancy.getCompanyName());
@@ -98,8 +98,8 @@ public class HtmlView implements View {
             fileContent = doc.html();
         }
         catch (IOException e) {
-            e.printStackTrace();
-            fileContent = "Some exception occurred";
+            logger.fatal("Can't create document for vacancies", e);
+            System.exit(-1);
         }
         return fileContent;
     }
@@ -111,15 +111,13 @@ public class HtmlView implements View {
      */
     private void updateFile(String fileContent) {
         try {
-            /* RandomAccessFile raf = new RandomAccessFile(filePath, "rw");
-            raf.writeUTF(fileContent);
-            raf.close(); */
             BufferedWriter fWriter = new BufferedWriter(new FileWriter(filePath));
             fWriter.write(fileContent);
             fWriter.close();
         }
         catch (IOException e) {
-            e.printStackTrace();
+            logger.error("Can't write update to html file", e);
+            System.exit(-1);
         }
     }
 
@@ -129,8 +127,6 @@ public class HtmlView implements View {
      * @throws IOException if file does not exists
      */
     protected Document getDocument() throws IOException {
- /*       File f = new File("result.html");
-        f.createNewFile();*/
         return Jsoup.parse(new File(backup), "UTF-8");
     }
 }

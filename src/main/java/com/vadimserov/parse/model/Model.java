@@ -24,17 +24,6 @@ public class Model {
         this.view = view;
 
     }
-
-  /*  public void scan() {
-        ArrayList<Vacancy> list = new ArrayList<>();
-        for (Provider provider :providers) {
-            try {
-                list.addAll(provider.getJavaVacancies("РҐР°СЂСЊРєРѕРІ"));
-            }catch (NullPointerException ignored){};
-        }
-        System.out.println(list.size());
-    }*/
-
     /**
      * Gathers all vacancies and send them in view.
      * Собирает все вакансии и отправляет для отображения.
