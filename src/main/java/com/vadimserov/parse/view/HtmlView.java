@@ -12,10 +12,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 import java.awt.*;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.List;
 
 /** Creating html page with all vacancies on it
@@ -28,20 +25,43 @@ public class HtmlView implements View {
      * Путь к html странице с результатом парсинга
      * Используйте этот путь если вы запускаете программу через .jar файл.
      * */
-/*    private final String filePath = "result.html";
-      private final String backup = "backup.html";*/
+
 
     /**
      * Use this path if you run project from IDE
      * Испольуйте этот путь если запускаете проект с вашей среды разработки.
      */
     private final static Logger logger = Logger.getLogger(HtmlView.class);
-    private final String filePath = "./src/main/java/" + this.getClass().getPackage().getName().replace('.', '/') + "/result.html";
     private final String backup = "./src/main/java/" + this.getClass().getPackage().getName().replace('.', '/') + "/backup.html";
+    private final String filePath = "./src/main/java/" + this.getClass().getPackage().getName().replace('.', '/') + "/result.html";
 
+    private final String document = "<!DOCTYPE html>\n" +
+            "<html lang=\"ru\">\n" +
+            "<head>\n" +
+            "    <meta charset=\"UTF-8\">\n" +
+            "    <title>Вакансии</title>\n" +
+            "</head>\n" +
+            "<body>\n" +
+            "<table>\n" +
+            "    <tr>\n" +
+            "        <th>Title</th>\n" +
+            "        <th>City</th>\n" +
+            "        <th>Company Name</th>\n" +
+            "        <th>Salary</th>\n" +
+            "    </tr>\n" +
+            "    <tr class=\"vacancy template\" style=\"display: none\">\n" +
+            "        <td class=\"title\"><a href=\"url\"></a></td>\n" +
+            "        <td class=\"city\"></td>\n" +
+            "        <td class=\"companyName\"></td>\n" +
+            "        <td class=\"salary\"></td>\n" +
+            "    </tr>\n" +
+            "</table>\n" +
+            "</body>\n" +
+            "</html>/";
     public void openFile()  {
         try {
-            File queryResult = new File(filePath.replace("./", ""));
+            File queryResult = new File ("result.html");
+           // File queryResult = new File(filePath.replace("./", ""));
             Desktop.getDesktop().browse(queryResult.toURI());
             logger.info("Program success! Result opened in browser.");
         }catch (IOException e){
@@ -75,8 +95,7 @@ public class HtmlView implements View {
      */
     private String getUpdatedFileContent(List<Vacancy> vacancies) {
         String fileContent = null;
-        try {
-            Document doc = getDocument();
+            Document doc = Jsoup.parse(document, "UTF-8");
 
             Element templateElement = doc.select(".template").first();
             Element patternElement = templateElement.clone();
@@ -96,11 +115,6 @@ public class HtmlView implements View {
                 templateElement.before(newVacancyElement.outerHtml());
             }
             fileContent = doc.html();
-        }
-        catch (IOException e) {
-            logger.fatal("Can't create document for vacancies", e);
-            System.exit(-1);
-        }
         return fileContent;
     }
 
@@ -111,7 +125,10 @@ public class HtmlView implements View {
      */
     private void updateFile(String fileContent) {
         try {
-            BufferedWriter fWriter = new BufferedWriter(new FileWriter(filePath));
+            File f = new File("result.html");
+            if (!f.exists())
+                f.createNewFile();
+            BufferedWriter fWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(f), "UTF8"));
             fWriter.write(fileContent);
             fWriter.close();
         }
