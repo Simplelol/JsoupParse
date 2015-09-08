@@ -36,7 +36,6 @@ public class Aggregator {
 
         Model model = new Model(view, HHstrategy, RUAStrategy);
 
-
         /**
          * Setting controller for model
          * Устанавливаем контроллер для данной модели

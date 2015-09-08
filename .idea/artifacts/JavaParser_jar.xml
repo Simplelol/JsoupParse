@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="JavaParser:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/JavaParser_jar</output-path>
+    <root id="archive" name="JavaParser.jar">
+      <element id="module-output" name="JavaParser" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17.jar" path-in-jar="/" />
+      <element id="library" level="project" name="jsoup-1.8.2-sources" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.8.2/jsoup-1.8.2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
