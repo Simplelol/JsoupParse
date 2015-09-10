@@ -1,6 +1,7 @@
 package com.vadimserov.parse.model;
 
 import com.vadimserov.parse.vo.Vacancy;
+import org.apache.log4j.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -14,8 +15,8 @@ import java.util.List;
  * Created by HP on 11.08.2015.
  */
 public class RUAStrategy implements Strategy{
-    public static final String URL_FORMAT = "http://rabota.ua/jobsearch/vacancy_list?regionId=21&keyWords=%s&pg=%d";
-    // public static final String URL_FORMAT = "http://hh.ua/search/vacancy?text=java&area=115&page=%d";
+    private static final String URL_FORMAT = "http://rabota.ua/jobsearch/vacancy_list?regionId=21&keyWords=%s&pg=%d";
+    private final static Logger logger = Logger.getLogger(RUAStrategy.class);
 
     protected Document getDocument(String searchString, int page) throws IOException {
         String url = String.format(URL_FORMAT, searchString,  page);
@@ -61,6 +62,8 @@ public class RUAStrategy implements Strategy{
             }
             catch (IOException e)
             {
+                logger.error(e);
+                break;
             }
         }
         return list;

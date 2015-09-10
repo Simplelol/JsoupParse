@@ -32,8 +32,6 @@ public class HtmlView implements View {
      * Испольуйте этот путь если запускаете проект с вашей среды разработки.
      */
     private final static Logger logger = Logger.getLogger(HtmlView.class);
-    private final String backup = "./src/main/java/" + this.getClass().getPackage().getName().replace('.', '/') + "/backup.html";
-    private final String filePath = "./src/main/java/" + this.getClass().getPackage().getName().replace('.', '/') + "/result.html";
 
     private final String document = "<!DOCTYPE html>\n" +
             "<html lang=\"ru\">\n" +
@@ -61,7 +59,6 @@ public class HtmlView implements View {
     public void openFile()  {
         try {
             File queryResult = new File ("result.html");
-           // File queryResult = new File(filePath.replace("./", ""));
             Desktop.getDesktop().browse(queryResult.toURI());
             logger.info("Program success! Result opened in browser.");
         }catch (IOException e){
@@ -138,12 +135,5 @@ public class HtmlView implements View {
         }
     }
 
-    /**
-     * Возвращает документ, который должен хранить результат парсинга
-     * @return Document used to keep result of parsing
-     * @throws IOException if file does not exists
-     */
-    protected Document getDocument() throws IOException {
-        return Jsoup.parse(new File(backup), "UTF-8");
-    }
+
 }

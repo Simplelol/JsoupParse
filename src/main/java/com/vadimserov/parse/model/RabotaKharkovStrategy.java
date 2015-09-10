@@ -1,6 +1,7 @@
 package com.vadimserov.parse.model;
 
 import com.vadimserov.parse.vo.Vacancy;
+import org.apache.log4j.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -10,11 +11,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by HP on 11.08.2015.
- */
 public class RabotaKharkovStrategy implements Strategy {
-    private static final String URL_FORMAT = "http://www.rabota.kharkov.ua/poisk-v.php3?i=%d&s13b2k=%s";
+    private static final String URL_FORMAT = "http://www.rabota.kharkov.ua/poisk-v.php3?i=%d&p=10&showa=1&keywordsmode=1&vacancynotpay=1&s13b2k=%s&f_currency=1";
+    private final static Logger logger = Logger.getLogger(RabotaKharkovStrategy.class);
+
 
     protected Document getDocument(String searchString, int page) throws IOException {
         String url = String.format(URL_FORMAT, page, searchString);
@@ -39,16 +39,13 @@ public class RabotaKharkovStrategy implements Strategy {
 
                 for (Element element : elements)
                 {
+                    if(!element.getElementsByAttributeValue("title", "Перейти на страницу вакансии").text().contains("Java")) continue;
                     Vacancy vacancy = new Vacancy();
                     vacancy.setTitle(element.getElementsByAttributeValue("title", "Перейти на страницу вакансии").text());
-                    //vacancy.setSalary(element.getElementsByAttributeValue("data-qa", "vacancy-serp__vacancy-compensation").text());
                     vacancy.setSalary("");
-                    //vacancy.setCity(element.getElementsByAttributeValue("data-qa", "vacancy-serp__vacancy-address").text());
                     vacancy.setCity("Харьков");
-                    //vacancy.setCompanyName(element.getElementsByAttributeValue("data-qa", "vacancy-serp__vacancy-employer").text());
                     vacancy.setCompanyName("");
                     vacancy.setSiteName(document.title());
-                    // vacancy.setUrl(element.getElementsByAttributeValue("data-qa", "vacancy-serp__vacancy-title").attr("href"));
                     vacancy.setUrl("http://www.rabota.kharkov.ua/" + element.getElementsByTag("a").attr("href"));
                     list.add(vacancy);
                 }
@@ -56,6 +53,8 @@ public class RabotaKharkovStrategy implements Strategy {
             }
             catch (IOException e)
             {
+                logger.error(e);
+                break;
             }
         }
 

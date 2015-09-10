@@ -27,14 +27,14 @@ public class Aggregator {
          */
         Provider HHstrategy = new Provider(new HHStrategy());
         Provider RUAStrategy = new Provider(new RUAStrategy());
-       // Provider rabotaKharkovStrategy = new Provider(new RabotaKharkovStrategy());
+        Provider rabotaKharkovStrategy = new Provider(new RabotaKharkovStrategy());
 
         /**
          * Creating model that contains reference for type of view that we use and providers to parse
          * Создаем модель, которая хранит ссылки на тип отображения и поставщиков которых будем парсить
          */
 
-        Model model = new Model(view, HHstrategy, RUAStrategy);
+        Model model = new Model(view, HHstrategy, RUAStrategy, rabotaKharkovStrategy);
 
         /**
          * Setting controller for model

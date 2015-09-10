@@ -1,6 +1,7 @@
 package com.vadimserov.parse.model;
 
 import com.vadimserov.parse.vo.Vacancy;
+import org.apache.log4j.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -13,6 +14,8 @@ import java.util.List;
 
 public class HHStrategy implements Strategy{
     private static final String URL_FORMAT = "http://hh.ua/search/vacancy?text=%s&area=135&page=%d";
+    private final static Logger logger = Logger.getLogger(HHStrategy.class);
+
 
     protected Document getDocument(String searchString, int page) throws IOException {
         String url = String.format(URL_FORMAT,searchString, page);
@@ -52,6 +55,8 @@ public class HHStrategy implements Strategy{
             }
             catch (IOException e)
             {
+                logger.error(e);
+                break;
             }
         }
 
