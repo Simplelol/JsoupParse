@@ -12,6 +12,7 @@ import java.io.IOException;
  * Currently supported sites:
  * rabota.ua
  * hh.ua
+ * rabota.kharkov.ua
  */
 public class Aggregator {
     public static void main(String[] args) throws IOException {
@@ -51,7 +52,8 @@ public class Aggregator {
          * Устанавливаем параметры для запроса сайтам
          */
         System.out.println("Wait a little, gathering info . . .");
-        view.userSearchQueryInput("Java");
+        //view.userSearchQueryInput("Java");
+        controller.querySelect("Java");
             System.out.println("Here is results: " +
                     "result.html");
             view.openFile();

@@ -81,7 +81,7 @@ public class HtmlView implements View {
     }
 
     public void userSearchQueryInput(String stringQuery) {
-        controller.onCitySelect(stringQuery);
+        controller.querySelect(stringQuery);
     }
 
     /**
